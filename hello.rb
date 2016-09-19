@@ -14,8 +14,6 @@ get '/' do
 EOS
 end
 
-get '/hello/:name' do
-  # "GET /hello/foo" と "GET /hello/bar" にマッチ
-  # params['name'] は 'foo' か 'bar'
-  "Hello #{params['name']}!"
+get '/hello/:name' do |name|
+  "Hello #{name}!"
 end
