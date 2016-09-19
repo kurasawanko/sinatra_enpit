@@ -5,7 +5,8 @@ get '/' do
 end
 
 get '/hello/:name' do |name|
-  "Hello #{name}!"
+  @name = name
+  erb :hello
 end
 
 get '/say/*/to/*' do
